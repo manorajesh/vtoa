@@ -1,6 +1,6 @@
 import sys
 import cv2
-import time
+#import time # if you need to slow down playback
 import curses
 from math import floor
 
@@ -22,7 +22,7 @@ def main():
     charset = "Ñ@#W$9876543210?!abc;:+=-,._ "
     charset_length = len(charset)-1
     
-    path = "Spinning fish.mp4"
+    path = sys.argv[1]
     video = cv2.VideoCapture(path)
     success, image = video.read()
 
